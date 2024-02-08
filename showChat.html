@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show_Chat</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .maindiv {
+            text-align: center;
+        }
+
+        .btn {
+            background-color: rgb(77, 230, 56);
+            width: 130px;
+            height: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .chatContainer {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="/chatData" method="post">
+            <h3 id="chatOutput">No Chat Exit</h3>
+            Type: <input type="text" placeholder="..." name="chatData"><br/><br/>
+            <button class="btn">Send</button>
+        </form>
+        <!-- <div id="chatContainer" class="chatContainer"></div> -->
+    </div>
+    <!-- <script>
+        const name = localStorage.getItem("name");
+
+        function sendHandler() {
+            const chatData = document.getElementById("chatData").value;
+            const chatContainer = document.getElementById("chatContainer");
+            const chatOutput = document.getElementById("chatOutput");
+
+            if (chatData.trim() !== "") {
+                const message = document.createElement("div");
+                message.innerText = `${name}: ${chatData}`;
+                chatContainer.appendChild(message);
+
+                // Update chatOutput
+                chatOutput.innerText = "Chat Messages";
+
+                // Clear the input field
+                document.getElementById("chatData").value = "";
+            } else {
+                alert("Please enter a valid message.");
+            }
+        }
+    </script> -->
+</body>
+</html>
